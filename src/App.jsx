@@ -23,6 +23,7 @@ function App() {
  
  
   const fetchMovies = async (query) => {
+    setIsLoading(true);
     try {
       const endPoint = query==="" ? `${API_BASE_URL}/discover/movie?api_key=${API_KEY}`
       :`${API_BASE_URL}/search/movie?api_key=${API_KEY}&query=${query}`
